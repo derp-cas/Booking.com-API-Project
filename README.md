@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Booking.com API Integration Project
+
+![Booking.com Logo](booking-logo.png)
+
+## Overview
+
+The Booking.com API Integration Project is a powerful tool designed to help developers access and utilize data from the Booking.com API in their applications. Whether you're building a travel app, a hotel booking platform, or anything in between, this project provides you with the foundation to integrate Booking.com's extensive database of accommodations, reviews, and more into your application.
+
+## Features
+
+-   **Access to Booking.com Data**: Connect to the Booking.com API to retrieve information about hotels, accommodations, flights, and more.
+
+-   **Search and Filters**: Implement advanced search and filter functionalities to help users find the best accommodations based on their preferences and budget.
+
+-   **Detailed Information**: Retrieve detailed information about hotels, including pricing, availability, reviews, and photos.
+
+-   **User Authentication**: Allow users to create accounts, save their favorite accommodations, and manage their bookings.
+
+-   **Booking and Reservation**: Enable users to make bookings and reservations directly through your application.
+
+-   **Customization**: Customize the integration to match the look and feel of your application.
 
 ## Getting Started
 
-First, run the development server:
+1. **Obtain API Credentials**:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+    - Visit the [Booking.com Affiliate Partner Program](https://www.booking.com/affiliate-program/v2/index.html) to obtain your API credentials.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Set Up Your Environment**:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    - Create a `.env` file in the project root and add your API credentials:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+        ```env
+        BOOKING_API_KEY=your-booking-api-key
+        ```
 
-## Learn More
+3. **Install Dependencies**:
 
-To learn more about Next.js, take a look at the following resources:
+    - Run `npm install` to install the required dependencies.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Start the Application**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    - Run `npm start` to start the application.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. **Integrate the API**:
+    - Use the provided API client to access Booking.com data and implement the features you need.
