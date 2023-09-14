@@ -19,7 +19,7 @@ const AppProvider: React.FC<PropsWithChildren> = ({ children }) => {
                 languagecode: "en-us",
             },
             headers: {
-                "X-RapidAPI-Key": process.env.API_KEY,
+                "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_KEY,
                 "X-RapidAPI-Host": "apidojo-booking-v1.p.rapidapi.com",
             },
         };
