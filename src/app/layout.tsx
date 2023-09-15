@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { AppProvider } from "./context/store";
+import StyledJsxRegistry from "./registry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <AppProvider>{children}</AppProvider>
+                <StyledJsxRegistry>
+                    <AppProvider>{children}</AppProvider>
+                </StyledJsxRegistry>
             </body>
         </html>
     );

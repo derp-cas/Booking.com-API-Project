@@ -1,0 +1,650 @@
+{
+    "base_currency": "USD",
+    "base_currency_date": "2023-09-14",
+    "exchange_rates": [
+        {
+            "exchange_rate_buy": "3.67305004",
+            "currency": "AED"
+        },
+        {
+            "currency": "AFN",
+            "exchange_rate_buy": "79.03247437"
+        },
+        {
+            "exchange_rate_buy": "100.52002569",
+            "currency": "ALL"
+        },
+        {
+            "currency": "AMD",
+            "exchange_rate_buy": "386.14977678"
+        },
+        {
+            "currency": "ANG",
+            "exchange_rate_buy": "1.78999999"
+        },
+        {
+            "exchange_rate_buy": "834.50006675",
+            "currency": "AOA"
+        },
+        {
+            "exchange_rate_buy": "349.99535257",
+            "currency": "ARS"
+        },
+        {
+            "exchange_rate_buy": "1.55122936",
+            "currency": "AUD"
+        },
+        {
+            "currency": "AWG",
+            "exchange_rate_buy": "1.78999999"
+        },
+        {
+            "exchange_rate_buy": "1.70000001",
+            "currency": "AZN"
+        },
+        {
+            "currency": "BAM",
+            "exchange_rate_buy": "1.83374999"
+        },
+        {
+            "exchange_rate_buy": "1.99999998",
+            "currency": "BBD"
+        },
+        {
+            "currency": "BDT",
+            "exchange_rate_buy": "109.74994381"
+        },
+        {
+            "exchange_rate_buy": "1.83370000",
+            "currency": "BGN"
+        },
+        {
+            "currency": "BHD",
+            "exchange_rate_buy": "0.37700000"
+        },
+        {
+            "exchange_rate_buy": "2832.46495680",
+            "currency": "BIF"
+        },
+        {
+            "currency": "BMD",
+            "exchange_rate_buy": "1.00000000"
+        },
+        {
+            "exchange_rate_buy": "1.36270001",
+            "currency": "BND"
+        },
+        {
+            "exchange_rate_buy": "6.90999993",
+            "currency": "BOB"
+        },
+        {
+            "exchange_rate_buy": "4.87330000",
+            "currency": "BRL"
+        },
+        {
+            "currency": "BSD",
+            "exchange_rate_buy": "1.00000000"
+        },
+        {
+            "currency": "BTN",
+            "exchange_rate_buy": "83.03628488"
+        },
+        {
+            "exchange_rate_buy": "13.66120152",
+            "currency": "BWP"
+        },
+        {
+            "currency": "BYN",
+            "exchange_rate_buy": "2.50000000"
+        },
+        {
+            "currency": "BYR",
+            "exchange_rate_buy": "27946.42473920"
+        },
+        {
+            "currency": "BZD",
+            "exchange_rate_buy": "1.99999998"
+        },
+        {
+            "currency": "CAD",
+            "exchange_rate_buy": "1.35175000"
+        },
+        {
+            "currency": "CDF",
+            "exchange_rate_buy": "2464.97502432"
+        },
+        {
+            "currency": "CHF",
+            "exchange_rate_buy": "0.89445000"
+        },
+        {
+            "currency": "CLP",
+            "exchange_rate_buy": "887.50300535"
+        },
+        {
+            "exchange_rate_buy": "7.27039991",
+            "currency": "CNY"
+        },
+        {
+            "currency": "COP",
+            "exchange_rate_buy": "3933.06157976"
+        },
+        {
+            "currency": "CRC",
+            "exchange_rate_buy": "533.36512316"
+        },
+        {
+            "currency": "CUP",
+            "exchange_rate_buy": "24.00000179"
+        },
+        {
+            "exchange_rate_buy": "103.58246195",
+            "currency": "CVE"
+        },
+        {
+            "exchange_rate_buy": "0.54876032",
+            "currency": "CYP"
+        },
+        {
+            "exchange_rate_buy": "22.99894965",
+            "currency": "CZK"
+        },
+        {
+            "exchange_rate_buy": "177.93244241",
+            "currency": "DJF"
+        },
+        {
+            "exchange_rate_buy": "6.99264998",
+            "currency": "DKK"
+        },
+        {
+            "currency": "DOP",
+            "exchange_rate_buy": "56.76000017"
+        },
+        {
+            "currency": "DZD",
+            "exchange_rate_buy": "137.56430703"
+        },
+        {
+            "exchange_rate_buy": "14.67026418",
+            "currency": "EEK"
+        },
+        {
+            "currency": "EGP",
+            "exchange_rate_buy": "30.94995403"
+        },
+        {
+            "exchange_rate_buy": "55.41920114",
+            "currency": "ETB"
+        },
+        {
+            "exchange_rate_buy": "0.93760255",
+            "currency": "EUR"
+        },
+        {
+            "currency": "FJD",
+            "exchange_rate_buy": "2.29710000"
+        },
+        {
+            "currency": "GBP",
+            "exchange_rate_buy": "0.80531508"
+        },
+        {
+            "currency": "GEL",
+            "exchange_rate_buy": "2.63299998"
+        },
+        {
+            "currency": "GHS",
+            "exchange_rate_buy": "11.44999938"
+        },
+        {
+            "exchange_rate_buy": "60.55999434",
+            "currency": "GMD"
+        },
+        {
+            "currency": "GNF",
+            "exchange_rate_buy": "8650.26801365"
+        },
+        {
+            "exchange_rate_buy": "319.48838041",
+            "currency": "GRD"
+        },
+        {
+            "exchange_rate_buy": "7.87120003",
+            "currency": "GTQ"
+        },
+        {
+            "exchange_rate_buy": "209.29983191",
+            "currency": "GYD"
+        },
+        {
+            "currency": "HKD",
+            "exchange_rate_buy": "7.82890017"
+        },
+        {
+            "exchange_rate_buy": "24.68274753",
+            "currency": "HNL"
+        },
+        {
+            "currency": "HRK",
+            "exchange_rate_buy": "7.06439986"
+        },
+        {
+            "currency": "HTG",
+            "exchange_rate_buy": "134.69210956"
+        },
+        {
+            "exchange_rate_buy": "359.96842222",
+            "currency": "HUF"
+        },
+        {
+            "currency": "IDR",
+            "exchange_rate_buy": "15355.42990501"
+        },
+        {
+            "exchange_rate_buy": "3.82365008",
+            "currency": "ILS"
+        },
+        {
+            "currency": "INR",
+            "exchange_rate_buy": "83.03628488"
+        },
+        {
+            "currency": "IQD",
+            "exchange_rate_buy": "1206.04377299"
+        },
+        {
+            "exchange_rate_buy": "37549.16099319",
+            "currency": "IRR"
+        },
+        {
+            "exchange_rate_buy": "136.22499001",
+            "currency": "ISK"
+        },
+        {
+            "currency": "JMD",
+            "exchange_rate_buy": "154.70687285"
+        },
+        {
+            "currency": "JOD",
+            "exchange_rate_buy": "0.70900000"
+        },
+        {
+            "currency": "JPY",
+            "exchange_rate_buy": "147.13491777"
+        },
+        {
+            "exchange_rate_buy": "146.79996211",
+            "currency": "KES"
+        },
+        {
+            "currency": "KGS",
+            "exchange_rate_buy": "88.67341583"
+        },
+        {
+            "currency": "KHR",
+            "exchange_rate_buy": "4122.96095159"
+        },
+        {
+            "currency": "KMF",
+            "exchange_rate_buy": "461.27102551"
+        },
+        {
+            "currency": "KRW",
+            "exchange_rate_buy": "1325.75796782"
+        },
+        {
+            "currency": "KWD",
+            "exchange_rate_buy": "0.30885000"
+        },
+        {
+            "currency": "KYD",
+            "exchange_rate_buy": "0.82000000"
+        },
+        {
+            "currency": "KZT",
+            "exchange_rate_buy": "465.79919916"
+        },
+        {
+            "currency": "LAK",
+            "exchange_rate_buy": "19843.44021164"
+        },
+        {
+            "exchange_rate_buy": "15025.68189103",
+            "currency": "LBP"
+        },
+        {
+            "currency": "LKR",
+            "exchange_rate_buy": "323.99944365"
+        },
+        {
+            "currency": "LRD",
+            "exchange_rate_buy": "187.33579690"
+        },
+        {
+            "currency": "LSL",
+            "exchange_rate_buy": "18.93000058"
+        },
+        {
+            "currency": "LTL",
+            "exchange_rate_buy": "3.23737620"
+        },
+        {
+            "currency": "LVL",
+            "exchange_rate_buy": "0.65897946"
+        },
+        {
+            "exchange_rate_buy": "4.85069989",
+            "currency": "LYD"
+        },
+        {
+            "currency": "MAD",
+            "exchange_rate_buy": "10.25525014"
+        },
+        {
+            "currency": "MDL",
+            "exchange_rate_buy": "17.90000025"
+        },
+        {
+            "exchange_rate_buy": "4466.05006192",
+            "currency": "MGA"
+        },
+        {
+            "exchange_rate_buy": "57.70998289",
+            "currency": "MKD"
+        },
+        {
+            "exchange_rate_buy": "2101.68239487",
+            "currency": "MMK"
+        },
+        {
+            "currency": "MNT",
+            "exchange_rate_buy": "3476.46477568"
+        },
+        {
+            "currency": "MOP",
+            "exchange_rate_buy": "8.06380009"
+        },
+        {
+            "currency": "MRO",
+            "exchange_rate_buy": "362.99678662"
+        },
+        {
+            "exchange_rate_buy": "0.40255000",
+            "currency": "MTL"
+        },
+        {
+            "currency": "MUR",
+            "exchange_rate_buy": "44.79999646"
+        },
+        {
+            "exchange_rate_buy": "15.41000089",
+            "currency": "MVR"
+        },
+        {
+            "exchange_rate_buy": "1115.78173531",
+            "currency": "MWK"
+        },
+        {
+            "exchange_rate_buy": "17.12750071",
+            "currency": "MXN"
+        },
+        {
+            "exchange_rate_buy": "4.68199989",
+            "currency": "MYR"
+        },
+        {
+            "currency": "MZN",
+            "exchange_rate_buy": "63.92499129"
+        },
+        {
+            "currency": "NAD",
+            "exchange_rate_buy": "18.93000058"
+        },
+        {
+            "currency": "NGN",
+            "exchange_rate_buy": "784.49960675"
+        },
+        {
+            "exchange_rate_buy": "36.57499472",
+            "currency": "NIO"
+        },
+        {
+            "exchange_rate_buy": "10.72479993",
+            "currency": "NOK"
+        },
+        {
+            "exchange_rate_buy": "132.85796168",
+            "currency": "NPR"
+        },
+        {
+            "currency": "NZD",
+            "exchange_rate_buy": "1.68976005"
+        },
+        {
+            "currency": "OMR",
+            "exchange_rate_buy": "0.38500000"
+        },
+        {
+            "currency": "PAB",
+            "exchange_rate_buy": "1.00000000"
+        },
+        {
+            "exchange_rate_buy": "3.70820006",
+            "currency": "PEN"
+        },
+        {
+            "exchange_rate_buy": "3.62705002",
+            "currency": "PGK"
+        },
+        {
+            "currency": "PHP",
+            "exchange_rate_buy": "56.75749193"
+        },
+        {
+            "exchange_rate_buy": "297.74990791",
+            "currency": "PKR"
+        },
+        {
+            "currency": "PLN",
+            "exchange_rate_buy": "4.34579991"
+        },
+        {
+            "currency": "PYG",
+            "exchange_rate_buy": "7278.39271852"
+        },
+        {
+            "currency": "QAR",
+            "exchange_rate_buy": "3.63999997"
+        },
+        {
+            "currency": "ROL",
+            "exchange_rate_buy": "46370.05687438"
+        },
+        {
+            "currency": "RON",
+            "exchange_rate_buy": "4.65964993"
+        },
+        {
+            "exchange_rate_buy": "109.90998917",
+            "currency": "RSD"
+        },
+        {
+            "exchange_rate_buy": "96.14996626",
+            "currency": "RUB"
+        },
+        {
+            "exchange_rate_buy": "1212.50071126",
+            "currency": "RWF"
+        },
+        {
+            "currency": "SAR",
+            "exchange_rate_buy": "3.75059998"
+        },
+        {
+            "currency": "SBD",
+            "exchange_rate_buy": "8.45308550"
+        },
+        {
+            "currency": "SCR",
+            "exchange_rate_buy": "14.06940010"
+        },
+        {
+            "currency": "SDG",
+            "exchange_rate_buy": "610.69266142"
+        },
+        {
+            "exchange_rate_buy": "11.15885049",
+            "currency": "SEK"
+        },
+        {
+            "exchange_rate_buy": "1.36270001",
+            "currency": "SGD"
+        },
+        {
+            "exchange_rate_buy": "224.68686271",
+            "currency": "SIT"
+        },
+        {
+            "currency": "SKK",
+            "exchange_rate_buy": "28.24620495"
+        },
+        {
+            "exchange_rate_buy": "22170.78623788",
+            "currency": "SLL"
+        },
+        {
+            "currency": "SOS",
+            "exchange_rate_buy": "571.23168451"
+        },
+        {
+            "exchange_rate_buy": "38.38500721",
+            "currency": "SRD"
+        },
+        {
+            "currency": "STD",
+            "exchange_rate_buy": "22462.92644945"
+        },
+        {
+            "currency": "SVC",
+            "exchange_rate_buy": "8.74999977"
+        },
+        {
+            "exchange_rate_buy": "217.34150293",
+            "currency": "SYP"
+        },
+        {
+            "exchange_rate_buy": "18.93000058",
+            "currency": "SZL"
+        },
+        {
+            "exchange_rate_buy": "35.74500454",
+            "currency": "THB"
+        },
+        {
+            "currency": "TJS",
+            "exchange_rate_buy": "10.93830027"
+        },
+        {
+            "exchange_rate_buy": "16677.38438278",
+            "currency": "TMM"
+        },
+        {
+            "exchange_rate_buy": "3.14639995",
+            "currency": "TND"
+        },
+        {
+            "currency": "TOP",
+            "exchange_rate_buy": "2.39635756"
+        },
+        {
+            "exchange_rate_buy": "26.94824720",
+            "currency": "TRY"
+        },
+        {
+            "currency": "TTD",
+            "exchange_rate_buy": "6.74880000"
+        },
+        {
+            "exchange_rate_buy": "31.90500359",
+            "currency": "TWD"
+        },
+        {
+            "exchange_rate_buy": "2505.01629752",
+            "currency": "TZS"
+        },
+        {
+            "exchange_rate_buy": "36.93150123",
+            "currency": "UAH"
+        },
+        {
+            "exchange_rate_buy": "3729.96996459",
+            "currency": "UGX"
+        },
+        {
+            "currency": "UYU",
+            "exchange_rate_buy": "38.29500100"
+        },
+        {
+            "exchange_rate_buy": "12154.55729842",
+            "currency": "UZS"
+        },
+        {
+            "exchange_rate_buy": "93760255.00000000",
+            "currency": "VEB"
+        },
+        {
+            "currency": "VEF",
+            "exchange_rate_buy": "267123.23361823"
+        },
+        {
+            "currency": "VES",
+            "exchange_rate_buy": "33.39839698"
+        },
+        {
+            "currency": "VND",
+            "exchange_rate_buy": "24227.45607235"
+        },
+        {
+            "currency": "VUV",
+            "exchange_rate_buy": "122.13503205"
+        },
+        {
+            "currency": "WST",
+            "exchange_rate_buy": "2.78940031"
+        },
+        {
+            "exchange_rate_buy": "615.02702543",
+            "currency": "XAF"
+        },
+        {
+            "exchange_rate_buy": "2.70000003",
+            "currency": "XCD"
+        },
+        {
+            "currency": "XOF",
+            "exchange_rate_buy": "615.02702543"
+        },
+        {
+            "currency": "XPF",
+            "exchange_rate_buy": "111.88574582"
+        },
+        {
+            "currency": "YER",
+            "exchange_rate_buy": "250.50029122"
+        },
+        {
+            "currency": "ZAR",
+            "exchange_rate_buy": "18.93000058"
+        },
+        {
+            "exchange_rate_buy": "18684.78577122",
+            "currency": "ZMK"
+        },
+        {
+            "currency": "ZMW",
+            "exchange_rate_buy": "20.37500136"
+        }
+    ]
+}
