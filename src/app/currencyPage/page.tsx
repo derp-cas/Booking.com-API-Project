@@ -1,8 +1,9 @@
 "use client";
-import axios from "axios";
+
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { useGlobalContext } from "../context/store";
+import Loading from "../loading";
 
 interface currencyProps {
     base_currency: string;
@@ -54,19 +55,21 @@ const CurrencyPage = () => {
     return (
         <main>
             <h1>CurrencyPage</h1>
-            <h2>Current Base Currency: {base_currency}</h2>
-            <h3>last updated: {base_currency_date}</h3>
-            {exchange_rates.map((rate, index) => {
-                const { exchange_rate_buy, currency } = rate;
+            <Suspense fallback={<Loading />}>
+                <h2>Current Base Currency: {base_currency}</h2>
+                <h3>last updated: {base_currency_date}</h3>
+                {exchange_rates.map((rate, index) => {
+                    const { exchange_rate_buy, currency } = rate;
 
-                return (
-                    <div key={index}>
-                        <p>
-                            buy for {exchange_rate_buy} {currency}
-                        </p>
-                    </div>
-                );
-            })}
+                    return (
+                        <div key={index}>
+                            <p>
+                                buy for {exchange_rate_buy} {currency}
+                            </p>
+                        </div>
+                    );
+                })}
+            </Suspense>
             <button>
                 <Link href="/">Back Home</Link>
             </button>
