@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 
-const fetchData = async (url: string, apikey: string | undefined) => {
+const fetchExchangeRates = async (url: string) => {
     const options = {
         method: "GET",
         url: url,
@@ -10,17 +10,18 @@ const fetchData = async (url: string, apikey: string | undefined) => {
             languagecode: "en-us",
         },
         headers: {
-            "X-RapidAPI-Key": apikey,
+            "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_KEY,
             "X-RapidAPI-Host": "apidojo-booking-v1.p.rapidapi.com",
         },
     };
 
     try {
         const response = await axios.request(options);
-        console.log(response.data);
+        return response.data;
     } catch (error) {
         console.error(error);
+        return error;
     }
 };
 
-export default fetchData;
+export default fetchExchangeRates;
