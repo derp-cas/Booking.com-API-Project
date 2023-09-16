@@ -4,7 +4,7 @@ import React, { PropsWithChildren, useContext, useEffect } from "react";
 import axios from "axios";
 
 interface AppContextProps {
-    fetchData: (url: string) => Promise<any>;
+    fetchData: (url: string, baseCurrency: string) => Promise<any>;
 }
 
 const defValue: AppContextProps = {
@@ -14,12 +14,12 @@ const defValue: AppContextProps = {
 const AppContext = React.createContext<AppContextProps>(defValue);
 
 const AppProvider: React.FC<PropsWithChildren> = ({ children }) => {
-    const fetchData = async (url: string) => {
+    const fetchData = async (url: string, baseCurrency: string = "USD") => {
         const options = {
             method: "GET",
             url: url,
             params: {
-                base_currency: "USD",
+                base_currency: baseCurrency,
                 languagecode: "en-us",
             },
             headers: {

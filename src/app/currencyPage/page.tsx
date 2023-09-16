@@ -22,6 +22,7 @@ interface currencyProps {
 
 const CurrencyPage = () => {
     const { fetchData } = useGlobalContext();
+    const [baseCurrency, setBaseCurrency] = useState("");
     const [data, setData] = useState<currencyProps>({
         base_currency: "",
         base_currency_date: "",
@@ -38,19 +39,27 @@ const CurrencyPage = () => {
     });
     const { base_currency, base_currency_date, exchange_rates } = data;
 
+    const handleCurrencyChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setBaseCurrency(e.target.value);
+    };
+
     useEffect(() => {
         const fetchDataAndSetData = async () => {
             try {
                 const fetchedData = await fetchData(
-                    "https://apidojo-booking-v1.p.rapidapi.com/currency/get-exchange-rates"
+                    "https://apidojo-booking-v1.p.rapidapi.com/currency/get-exchange-rates",
+                    baseCurrency
                 );
                 setData(fetchedData);
+                setBaseCurrency(data.base_currency);
+                console.log(data);
+                console.log(baseCurrency);
             } catch (error) {
                 console.error(error);
             }
         };
         fetchDataAndSetData();
-    }, []);
+    }, [baseCurrency]);
 
     return (
         <StyledCurrencyPage>
@@ -60,6 +69,28 @@ const CurrencyPage = () => {
                     <h2 className="currency-page__base-currency">
                         Current Base Currency: {base_currency}
                     </h2>
+                    <form className="currency-page__base-currency__form">
+                        <label htmlFor="currency" className="form__label">
+                            Change base Currency:
+                        </label>
+                        <select
+                            name="currency"
+                            id="currency"
+                            className="form__select"
+                            value={baseCurrency}
+                            onChange={(e) => handleCurrencyChange(e)}
+                        >
+                            {exchange_rates.map((rate, index) => {
+                                const { currency } = rate;
+
+                                return (
+                                    <option value={currency} key={index}>
+                                        {currency}
+                                    </option>
+                                );
+                            })}
+                        </select>
+                    </form>
                     <h3 className="currency-page__base-currency-date">
                         Last Updated: {base_currency_date}
                     </h3>
