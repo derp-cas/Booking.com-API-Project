@@ -52,8 +52,8 @@ const CurrencyPage = () => {
                 );
                 setData(fetchedData);
                 setBaseCurrency(data.base_currency);
-                console.log(data);
-                console.log(baseCurrency);
+                // console.log(data);
+                // console.log(baseCurrency);
             } catch (error) {
                 console.error(error);
             }
