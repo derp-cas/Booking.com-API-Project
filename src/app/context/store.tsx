@@ -14,6 +14,7 @@ const defValue: AppContextProps = {
 const AppContext = React.createContext<AppContextProps>(defValue);
 
 const AppProvider: React.FC<PropsWithChildren> = ({ children }) => {
+    //implement jQuery here
     const fetchData = async (url: string, baseCurrency: string = "USD") => {
         const options = {
             method: "GET",
