@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState, Suspense } from "react";
-import { useGlobalContext } from "../context/store";
+import React, { useState, Suspense } from "react";
 import Loading from "../loading";
 import { styled } from "styled-components";
+import useFetch from "../hooks/use-fetch";
 
 interface currencyProps {
     base_currency: string;
@@ -21,9 +21,9 @@ interface currencyProps {
 }
 
 const CurrencyPage = () => {
-    const { fetchData } = useGlobalContext();
     const [baseCurrency, setBaseCurrency] = useState("");
-    const [data, setData] = useState<currencyProps>({
+    const { data, isLoading } = useFetch();
+    const [dataState, setData] = useState<currencyProps>({
         base_currency: "",
         base_currency_date: "",
         exchange_rates: [
@@ -37,29 +37,11 @@ const CurrencyPage = () => {
             },
         ],
     });
-    const { base_currency, base_currency_date, exchange_rates } = data;
+    const { base_currency, base_currency_date, exchange_rates } = data || {};
 
     const handleCurrencyChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setBaseCurrency(e.target.value);
     };
-
-    useEffect(() => {
-        const fetchDataAndSetData = async () => {
-            try {
-                const fetchedData = await fetchData(
-                    "https://apidojo-booking-v1.p.rapidapi.com/currency/get-exchange-rates",
-                    baseCurrency
-                );
-                setData(fetchedData);
-                setBaseCurrency(data.base_currency);
-                console.log(data);
-                console.log(baseCurrency);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-        fetchDataAndSetData();
-    }, [baseCurrency]);
 
     return (
         <StyledCurrencyPage>
@@ -80,7 +62,7 @@ const CurrencyPage = () => {
                             value={baseCurrency}
                             onChange={(e) => handleCurrencyChange(e)}
                         >
-                            {exchange_rates.map((rate, index) => {
+                            {exchange_rates!.map((rate, index) => {
                                 const { currency } = rate;
 
                                 return (
@@ -95,7 +77,7 @@ const CurrencyPage = () => {
                         Last Updated: {base_currency_date}
                     </h3>
                     <div className="currency-page__exchange-rates">
-                        {exchange_rates.map((rate, index) => {
+                        {exchange_rates!.map((rate, index) => {
                             const { exchange_rate_buy, currency } = rate;
 
                             return (

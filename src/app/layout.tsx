@@ -1,10 +1,15 @@
+"use client";
+
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { AppProvider } from "./context/store";
 import StyledJsxRegistry from "./registry";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const queryClient = new QueryClient();
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -20,7 +25,9 @@ export default function RootLayout({
         <StyledJsxRegistry>
             <html lang="en">
                 <body>
-                    <AppProvider>{children}</AppProvider>
+                    <QueryClientProvider client={queryClient}>
+                        <AppProvider>{children}</AppProvider>
+                    </QueryClientProvider>
                 </body>
             </html>
         </StyledJsxRegistry>
