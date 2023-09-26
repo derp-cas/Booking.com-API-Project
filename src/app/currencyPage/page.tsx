@@ -4,7 +4,8 @@ import React, { useState, Suspense } from "react";
 import Loading from "../assets/loading";
 import { styled } from "styled-components";
 import useFetch from "../hooks/use-fetch";
-import ExchangeRates from "./ExchangeRates";
+import ExchangeRates from "./components/ExchangeRates";
+import CurrencyForm from "./components/CurrencyForm";
 
 interface currencyProps {
     base_currency: string;
@@ -55,35 +56,7 @@ const CurrencyPage = () => {
                         <h2 className="currency-page__base-currency">
                             Current Base Currency: {base_currency}
                         </h2>
-                        <form className="currency-page__base-currency__form">
-                            <label htmlFor="currency" className="form__label">
-                                Change base Currency:
-                            </label>
-                            {exchange_rates ? (
-                                <select
-                                    name="currency"
-                                    id="currency"
-                                    className="form__select"
-                                    value={baseCurrency}
-                                    onChange={(e) => handleCurrencyChange(e)}
-                                >
-                                    {exchange_rates.map((rate, index) => {
-                                        const { currency } = rate;
-
-                                        return (
-                                            <option
-                                                value={currency}
-                                                key={index}
-                                            >
-                                                {currency}
-                                            </option>
-                                        );
-                                    })}
-                                </select>
-                            ) : (
-                                "Sorry, there was an error loading the exchange rates"
-                            )}
-                        </form>
+                        <CurrencyForm exchange_rates={exchange_rates} />
                         <h3 className="currency-page__base-currency-date">
                             Last Updated: {base_currency_date}
                         </h3>

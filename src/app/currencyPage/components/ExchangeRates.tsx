@@ -1,17 +1,5 @@
 import React from "react";
-
-interface IExchangeRates {
-    exchange_rates: [
-        {
-            exchange_rate_buy: string;
-            currency: string;
-        },
-        {
-            currency: string;
-            exchange_rate_buy: string;
-        }
-    ];
-}
+import { IExchangeRates } from "../types";
 
 const ExchangeRates: React.FC<IExchangeRates> = ({ exchange_rates }) => {
     return (
