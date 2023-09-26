@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
 import React, { useState, Suspense } from "react";
-import Loading from "../loading";
+import Loading from "../assets/loading";
 import { styled } from "styled-components";
 import useFetch from "../hooks/use-fetch";
+import ExchangeRates from "./ExchangeRates";
 
 interface currencyProps {
     base_currency: string;
@@ -47,52 +48,52 @@ const CurrencyPage = () => {
         <StyledCurrencyPage>
             <h1 className="currency-page__title">CurrencyPage</h1>
             <div className="currency-page__content">
-                <Suspense fallback={<Loading />}>
-                    <h2 className="currency-page__base-currency">
-                        Current Base Currency: {base_currency}
-                    </h2>
-                    <form className="currency-page__base-currency__form">
-                        <label htmlFor="currency" className="form__label">
-                            Change base Currency:
-                        </label>
-                        <select
-                            name="currency"
-                            id="currency"
-                            className="form__select"
-                            value={baseCurrency}
-                            onChange={(e) => handleCurrencyChange(e)}
-                        >
-                            {exchange_rates!.map((rate, index) => {
-                                const { currency } = rate;
-
-                                return (
-                                    <option value={currency} key={index}>
-                                        {currency}
-                                    </option>
-                                );
-                            })}
-                        </select>
-                    </form>
-                    <h3 className="currency-page__base-currency-date">
-                        Last Updated: {base_currency_date}
-                    </h3>
-                    <div className="currency-page__exchange-rates">
-                        {exchange_rates!.map((rate, index) => {
-                            const { exchange_rate_buy, currency } = rate;
-
-                            return (
-                                <div
-                                    key={index}
-                                    className="currency-page__exchange-rate"
+                {isLoading ? (
+                    <Loading />
+                ) : (
+                    <>
+                        <h2 className="currency-page__base-currency">
+                            Current Base Currency: {base_currency}
+                        </h2>
+                        <form className="currency-page__base-currency__form">
+                            <label htmlFor="currency" className="form__label">
+                                Change base Currency:
+                            </label>
+                            {exchange_rates ? (
+                                <select
+                                    name="currency"
+                                    id="currency"
+                                    className="form__select"
+                                    value={baseCurrency}
+                                    onChange={(e) => handleCurrencyChange(e)}
                                 >
-                                    <p className="currency-page__rate">
-                                        Buy for {exchange_rate_buy} {currency}
-                                    </p>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </Suspense>
+                                    {exchange_rates.map((rate, index) => {
+                                        const { currency } = rate;
+
+                                        return (
+                                            <option
+                                                value={currency}
+                                                key={index}
+                                            >
+                                                {currency}
+                                            </option>
+                                        );
+                                    })}
+                                </select>
+                            ) : (
+                                "Sorry, there was an error loading the exchange rates"
+                            )}
+                        </form>
+                        <h3 className="currency-page__base-currency-date">
+                            Last Updated: {base_currency_date}
+                        </h3>
+                        {exchange_rates ? (
+                            <ExchangeRates exchange_rates={exchange_rates} />
+                        ) : (
+                            "Sorry, there was an error loading the exchange rates"
+                        )}
+                    </>
+                )}
                 <button className="currency-page__back-button">
                     <Link href="/" className="currency-page__back-link">
                         Back Home

@@ -1,10 +1,12 @@
 import React from "react";
+import "./loading.css";
 
 const Loading = () => {
     return (
         <div className="loader">
-            asdasd
-            <div className="spinner">asdasdasd</div>
+            <div className="spinner">
+                <div className="spinner-inner"></div>
+            </div>
         </div>
     );
 };
