@@ -17,14 +17,14 @@ interface currencyProps {
     ];
 }
 
-const useFetch = () => {
+const useFetch = (base_currency: string = "USD") => {
     return useQuery({
         queryFn: async () => {
             const options = {
                 method: "GET",
                 url: "https://apidojo-booking-v1.p.rapidapi.com/currency/get-exchange-rates",
                 params: {
-                    base_currency: "USD",
+                    base_currency: base_currency,
                     languagecode: "en-us",
                 },
                 headers: {
