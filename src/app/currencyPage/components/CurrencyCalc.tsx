@@ -1,18 +1,23 @@
 import useFetch from "@/app/hooks/use-fetch";
-import React from "react";
+import React, { useState } from "react";
 
 const CurrencyCalc = () => {
     const { data, isLoading } = useFetch("EUR");
     const { base_currency, exchange_rates } = data || {};
+    const [amount, setAmount] = useState("");
+    const [firstCurrency, setFirstCurrency] = useState("");
+    const [secondCurrency, setSecondCurrency] = useState("");
 
-    const handleSubmit = (e: React.FormEvent<HTMLSelectElement>) => {
-        //logic here
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        console.log(amount + " " + firstCurrency + " " + secondCurrency);
+        const { data } = useFetch(firstCurrency);
     };
 
     return (
         <form
             className="currency-page__base-currency__form"
-            onSubmit={() => handleSubmit}
+            onSubmit={handleSubmit}
         >
             <label htmlFor="currency" className="form__label">
                 Amount:
@@ -22,7 +27,8 @@ const CurrencyCalc = () => {
                 name="amount"
                 type="number"
                 id="amount"
-                value="0.00"
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
             ></input>
             <label htmlFor="currency" className="form__label">
                 From:
@@ -32,7 +38,8 @@ const CurrencyCalc = () => {
                     name="currency"
                     id="currency"
                     className="form__select"
-                    value={base_currency}
+                    value={firstCurrency}
+                    onChange={(e) => setFirstCurrency(e.target.value)}
                 >
                     {exchange_rates.map((rate, index) => {
                         const { currency } = rate;
@@ -55,7 +62,8 @@ const CurrencyCalc = () => {
                     name="currency"
                     id="currency"
                     className="form__select"
-                    value={base_currency}
+                    value={secondCurrency}
+                    onChange={(e) => setSecondCurrency(e.target.value)}
                 >
                     {exchange_rates.map((rate, index) => {
                         const { currency } = rate;

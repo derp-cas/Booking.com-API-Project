@@ -6,6 +6,7 @@ import { styled } from "styled-components";
 import useFetch from "../hooks/use-fetch";
 import ExchangeRates from "./components/ExchangeRates";
 import CurrencyForm from "./components/CurrencyForm";
+import CurrencyCalc from "./components/CurrencyCalc";
 
 interface currencyProps {
     base_currency: string;
@@ -47,6 +48,7 @@ const CurrencyPage = () => {
 
     return (
         <StyledCurrencyPage>
+            <CurrencyCalc />
             <h1 className="currency-page__title">CurrencyPage</h1>
             <div className="currency-page__content">
                 {isLoading ? (
