@@ -1,6 +1,5 @@
-"use client";
 import React from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const MainPage = () => {
@@ -16,26 +15,9 @@ const MainPage = () => {
                     Chose one of the following options
                 </h2>
                 <div className="button-container">
-                    <button className="button">
-                        <Link href="/currencyPage" className="button__link">
-                            Currency Page
-                        </Link>
-                    </button>
-                    <button className="button">
-                        <Link href="/currencyPage" className="button__link">
-                            Currency Page
-                        </Link>
-                    </button>
-                    <button className="button">
-                        <Link href="/currencyPage" className="button__link">
-                            Currency Page
-                        </Link>
-                    </button>
-                    <button className="button">
-                        <Link href="/currencyPage" className="button__link">
-                            Currency Page
-                        </Link>
-                    </button>
+                    <Link to="/currencyPage" className="button__link">
+                        Currency Page
+                    </Link>
                 </div>
             </section>
         </StyledMainPage>
