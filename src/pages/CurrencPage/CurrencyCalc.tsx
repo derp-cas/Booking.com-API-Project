@@ -1,39 +1,27 @@
 import { log } from "console";
 import React, { useEffect, useState } from "react";
-
 import Loading from "../../assets/Loading";
 import useFetch from "../../hooks/use-fetch";
-
-interface IExchangeRates {
-    exchange_rates:
-        | [
-              {
-                  exchange_rate_buy: string;
-                  currency: string;
-              },
-              {
-                  currency: string;
-                  exchange_rate_buy: string;
-              }
-          ]
-        | never;
-}
 
 const CurrencyCalc = () => {
     const [firstCurrency, setFirstCurrency] = useState("USD");
     const [secondCurrency, setSecondCurrency] = useState("EUR");
+    const [result, setResult] = useState("");
     const { data, isLoading, refetch } = useFetch(firstCurrency);
     const { base_currency, exchange_rates } = data || {};
     const [amount, setAmount] = useState("");
 
-    let exchangeRatesWithBaseCurrency: IExchangeRates = [];
+    let exchangeRatesWithBaseCurrency: Array<{
+        exchange_rate_buy: string;
+        currency: string | undefined;
+    }> = [];
 
     if (exchange_rates) {
         // Create a copy of exchange rates and add the base currency to it
         exchangeRatesWithBaseCurrency = [
             {
                 currency: base_currency,
-                exchange_rate_buy: "1.0", // Set the rate to 1 for the base currency
+                exchange_rate_buy: "1.0",
             },
             ...exchange_rates,
         ];
@@ -46,6 +34,26 @@ const CurrencyCalc = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        // Find the exchange rate for the selected secondCurrency
+        const selectedRate = exchangeRatesWithBaseCurrency.find(
+            (rate) => rate.currency === secondCurrency
+        );
+
+        if (selectedRate) {
+            // Calculate the exchanged amount
+            const exchangedAmount = (
+                parseFloat(amount) * parseFloat(selectedRate.exchange_rate_buy)
+            ).toFixed(2);
+
+            setResult(exchangedAmount);
+            // Display the result or perform further actions
+            console.log(
+                `Exchanged Amount: ${exchangedAmount} ${secondCurrency}`
+            );
+        } else {
+            console.error(`Exchange rate for ${secondCurrency} not found.`);
+        }
     };
 
     return (
@@ -64,7 +72,7 @@ const CurrencyCalc = () => {
                         name="amount"
                         type="number"
                         id="amount"
-                        min="0"
+                        min="1.00"
                         value={amount}
                         onChange={(e) => setAmount(e.target.value)}
                     ></input>
@@ -76,7 +84,7 @@ const CurrencyCalc = () => {
                         name="currency"
                         id="currency"
                         className="form__select"
-                        value={base_currency}
+                        value={firstCurrency}
                         onChange={(e) => setFirstCurrency(e.target.value)}
                     >
                         {exchangeRatesWithBaseCurrency.map((rate, index) => {
@@ -119,6 +127,11 @@ const CurrencyCalc = () => {
             ) : (
                 <Loading />
             )}
+            {result ? (
+                <h1>
+                    {amount} {firstCurrency} = {result} {secondCurrency}
+                </h1>
+            ) : null}
         </>
     );
 };
