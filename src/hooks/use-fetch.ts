@@ -31,8 +31,7 @@ const useFetch = (base_currency: string = "USD") => {
                     languagecode: "en-us",
                 },
                 headers: {
-                    "X-RapidAPI-Key":
-                        "352393bba3msh4bb19be8824db18p1db350jsnc22ec5ff610a",
+                    "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
                     "X-RapidAPI-Host": "apidojo-booking-v1.p.rapidapi.com",
                 },
             };
