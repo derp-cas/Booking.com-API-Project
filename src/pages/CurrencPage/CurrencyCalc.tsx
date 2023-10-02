@@ -26,7 +26,7 @@ const CurrencyCalc = () => {
             ...exchange_rates,
         ];
     }
-
+    //move to onchange
     useEffect(() => {
         // Check if firstCurrency is not empty to prevent unnecessary fetch
         firstCurrency && refetch();
@@ -127,11 +127,11 @@ const CurrencyCalc = () => {
             ) : (
                 <Loading />
             )}
-            {result ? (
+            {!!result && (
                 <h1>
                     {amount} {firstCurrency} = {result} {secondCurrency}
                 </h1>
-            ) : null}
+            )}
         </>
     );
 };

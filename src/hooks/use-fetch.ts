@@ -6,16 +6,10 @@ import React from "react";
 interface currencyProps {
     base_currency: string;
     base_currency_date: string;
-    exchange_rates: [
-        {
-            exchange_rate_buy: string;
-            currency: string;
-        },
-        {
-            currency: string;
-            exchange_rate_buy: string;
-        }
-    ];
+    exchange_rates: {
+        exchange_rate_buy: string;
+        currency: string;
+    }[];
 }
 
 const useFetch = (base_currency: string = "USD") => {
