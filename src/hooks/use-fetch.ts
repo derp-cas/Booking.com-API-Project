@@ -16,7 +16,6 @@ const useFetch = (base_currency: string = "USD") => {
     return useQuery({
         queryFn: async () => {
             console.log("useFetch fired");
-
             const options = {
                 method: "GET",
                 url: "https://apidojo-booking-v1.p.rapidapi.com/currency/get-exchange-rates",
